@@ -1,17 +1,16 @@
 spring:
-  application:
   datasource:
-    url: jdbc:postgresql://localhost:5432/user
+    url: jdbc:postgresql://localhost:5432/Album
     username: postgres
-    password: 
+    password: postdb
     driver-class-name: org.postgresql.Driver
-    jpa:
-      hibernate:
-        ddl-auto: update
-        generate-ddl: true
-        dialect: org.hibernate.dialect.PostgresSQLDialect
-        format-sql: true
-        show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format-sql: true
+      show-sql: true
+    open-in-view: false
+server:
+  port: 9090

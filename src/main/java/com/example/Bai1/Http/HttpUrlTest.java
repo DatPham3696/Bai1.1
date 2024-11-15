@@ -9,12 +9,12 @@ import java.net.URL;
 
 public class HttpUrlTest {
     private static HttpURLConnection connection;
-    public String connect(URL url){
+    public static String connect(URL url){
         try {
             connection =(HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
-            connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
             int responseCode = connection.getResponseCode();
             System.out.println(responseCode);
             if(responseCode == HttpURLConnection.HTTP_OK){
